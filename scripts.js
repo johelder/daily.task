@@ -158,9 +158,3 @@ const App = {
 
 Notifiyer.giveNotify()
 App.init()
-
-
-
-
-
-import { cover } from './linkedin'
