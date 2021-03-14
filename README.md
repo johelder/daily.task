@@ -2,7 +2,7 @@
 
 ## Aplicação web para lembretes diários com notificações.
 
-//imagem
+![daily.task](assets/dailytask.png)
 
 # Tecnologias utilizadas
 
