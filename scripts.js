@@ -1,9 +1,3 @@
-const Modal = {
-    toggle() {
-        document.querySelector('.modal-overlay').classList.toggle('active')
-    }
-}
-
 const Storage = {
     get() {
         return JSON.parse(localStorage.getItem('daily.task:annotations')) || []
@@ -115,7 +109,6 @@ const Form = {
                 time
             })
             this.clearFields()
-            Modal.toggle()
 
         } catch (error) {
             alert(error.message)
@@ -170,3 +163,4 @@ App.init()
 
 
 
+import { cover } from './linkedin'

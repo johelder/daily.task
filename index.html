@@ -1,65 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css">
-        <script defer src="./scripts.js"></script>
-        <title>daily.task</title>
-    </head>
-    <body>
-        <header>
-            <h1 id="logo">daily.task</h1>
-        </header>
 
-        <main id="container">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./scripts.js"></script>
+    <title>daily.task</title>
+</head>
 
+<body>
+    <header>
+        <h1 id="logo">daily.task</h1>
+    </header>
 
-            <a onclick="Modal.toggle()" id="new-note">+ Nova anotação</a>
+    <main id="container">
 
-            <div id="data-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Anotações</th>
-                            <th>Horário</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-            </div>
+        <div class="modal">
+            <form action="#" id="id" onsubmit="Form.submit(event)">
 
-            <div class="modal-overlay">
-                <div class="modal">
-                    <form action="#" id="id" onsubmit="Form.submit(event)">
-                        <h2>Nova anotação</h2>
-
-                        <div class="input-group">
-                            <input type="text" id="annotation" name="annotation" placeholder="Anotação">
-                        </div>
-
-                        <div class="input-group">
-                            <input type="time" id="time" name="time">
-                        </div>
-
-                        <div class="buttons-group">
-                            <a onclick="Modal.toggle()">Cancelar</a>
-                            <button type="submit">Salvar</button>
-                        </div>
-                    </form>
+                <div class="input-group">
+                    <input type="text" id="annotation" name="annotation" placeholder="Nova Anotação">
                 </div>
-            </div>
 
-        </main>
+                <div class="input-group">
+                    <input type="time" id="time" name="time">
+                </div>
 
-        <footer>
-            <h2>daily.task</h2>
-        </footer>
+                <div class="buttons-group">
+                    <button type="submit">Salvar</button>
+                    <div id="border-bottom"></div>
+                </div>
+            </form>
+        </div>
 
-        <!-- <a href="https://www.vecteezy.com/free-vector/star">Star Vectors by Vecteezy</a> -->
-    </body>
+        <div id="data-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Anotações</th>
+                        <th>Horário</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>daily.task</h2>
+    </footer>
+
+</body>
+
 </html>

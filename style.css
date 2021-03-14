@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
 :root {
     --purple: #591ae8;
-    --green: #50fa7b;
+    --background-purple: #8257e5;
+    --green: #4ad395;
     --red: #e92929;
     --background: #f0f2f5;
     font-size: 62.5%;
@@ -15,7 +16,7 @@
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -27,20 +28,20 @@ body {
 header {
     padding: 8rem;
     text-align: center;
+    background-color: var(--background-purple);
 }
 
 header #logo {
-    color: #000;
-    font-weight: 100;
+    color: #fff;
+    font-weight: 700;
 }
 
 /* main */
 
 #container {
-    width: min(90vw, 800px);
+    width: min(80vw, 800px);
     margin: auto;
     margin-top: 8rem;
-    background-color: var(--background);
     padding: 2rem;
     border-radius: .5rem;
 }
@@ -56,6 +57,7 @@ header #logo {
 
 #data-table {
     width: 100%;
+    margin-top: 2rem;
 }
 
 #data-table table {
@@ -83,7 +85,7 @@ header #logo {
 }
 
 #data-table table tbody tr {
-    opacity: .8;
+    opacity: .9;
 }
 
 #data-table table tbody tr:hover {
@@ -97,50 +99,26 @@ header #logo {
 
 .done {
     cursor: pointer;
+    width: 3rem;
 }
 
 /* modal */
 
-.modal-overlay {
-    opacity: 0;
-    visibility: hidden;
+.modal {
+    margin-top: -14rem;
 }
-
-.modal-overlay.active {
-    background: rgba(0, 0, 0, .7);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-overlay.active .modal h2 {
-    font-size: 1.4rem;
-    color: var(--purple);
-    font-weight: bold;
-}
-
-.modal-overlay.active .modal {
-    width: min(90%, 600px);
-    background-color: var(--background);
-    border-radius: .5rem;
-    padding: 3rem;
-}
-
 
 input {
     width: 100%;
-    padding: 1.4rem;
+    padding: 1.8rem;
     border: none;
     outline: none;
+    border-radius: .5rem;
+}
+
+input::placeholder {
+    color: #969cb3;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .input-group {
@@ -148,42 +126,36 @@ input {
 }
 
 .buttons-group {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
-
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.buttons-group a,
-.buttons-group button {
-    width: 48%;
-    height: 50px;
-
-    font-size: 1.4rem;
-}
-
-.buttons-group a {
-    border: 2px solid var(--red);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    color: var(--red);
-
-    font-weight: bold;
-
+#border-bottom {
+    height: 1px;
+    width: 100%;
+    background-color: #969cb3;
     opacity: .6;
-    border-radius: .5rem;
 
-    cursor: pointer;
+    margin-top: 0;
 }
+
+.buttons-group button {
+    align-self: flex-end;
+    width: 30%;
+    height: 40px;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+
+    outline: none;
+
+    transition: .2s;
+}
+
 
 .buttons-group a:hover,
 .buttons-group button:hover {
-    opacity: 1;
+    opacity: .9;
 }
 
 .buttons-group button {
@@ -192,7 +164,6 @@ input {
     color: white;
     font-weight: bold;
     border-radius: .5rem;
-    opacity: .6;
     cursor: pointer;
 }
 
@@ -200,7 +171,6 @@ input {
 /*footer*/
 
 footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
     padding: 8rem;
@@ -211,6 +181,6 @@ footer {
 }
 
 footer h2 {
-    font-weight: 400;
-
+    font-weight: 700;
+    color: var(--green);
 }
